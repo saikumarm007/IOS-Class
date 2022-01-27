@@ -150,6 +150,7 @@ for i in stride(from: C, to: 1, by: -1)
     print(" ")
   }
 }
+print("------------------------------------")
 //**************** END OF QUESTION 4 ****************
 
 
@@ -157,12 +158,44 @@ for i in stride(from: C, to: 1, by: -1)
 //**************** QUESTION 5 ****************
 // Using Strings
 //5.a) Declare a String and assign the value of your own, Write a Swift code to add "A" in front of the string and print it. If the string already begins with "A", then simply print it.
+var ostring : String = "Northwest Missouri State University"
+if(ostring.hasPrefix("a")){
+    print(ostring)
+}
+else{
+    print("A \(ostring)")
+}
+print("------------------------------------")
 
 //5.b) Declare a String str1 and and assign the value of your own. Write a swift code to add the last character at the front and back of the given string and print it.
+var str1 : String = "Northwest Missouri State University"
 
+    var result = str1
+    let first_char = result.remove(at: result.startIndex)
+    let findLast = result.index(before: result.endIndex)
+    let last_char = result.remove(at: findLast)
+    result.append(first_char)
+    result.insert(last_char, at: (result.startIndex))
+    
+    print(result)
+print("------------------------------------")
 //5.c) Declare a String Swift and print them in the reverse order.
-
+var rstring : String = "Northwest Missouri State University"
+print(String(rstring.reversed() ))
+print("------------------------------------")
 //5.d) Write a Swift code  to check if the first or last characters are 'a' of a given string, return the given string without those 'a' characters in the first and last, otherwise return the given string.
+//var new_str = "Northwest Missouri State University"
+var new_str = "ababa"
+    if new_str.hasPrefix("a")
+    {
+        new_str.removeFirst()
+    }
+    
+    if new_str.hasSuffix("a")
+    {
+        new_str.removeLast()
+    }
+    print(new_str)
  //declare var myString1 = "ababa"
  //expected output bab
 //**************** END OF QUESTION 5 ****************
