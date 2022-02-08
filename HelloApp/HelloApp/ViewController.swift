@@ -33,10 +33,13 @@ class ViewController: UIViewController {
             grade = "B"
         case 70...80:
             grade = "C"
+        case 0...70:
+            grade = "Fail..Sorry..!"
         default:
             grade = "Enter valid percentage"
         }
-        LableConnect.text = "Hello, \(name), Percentage is, \(grade)"
+        LableConnect.text = "Hello, \(name), Percentage is: \(grade)"
+        
     }
     
 }
