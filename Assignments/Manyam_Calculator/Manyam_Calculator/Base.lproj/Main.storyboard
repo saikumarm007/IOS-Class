@@ -16,23 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="2sL-xd-4GO">
-                                <rect key="frame" x="30" y="44" width="354" height="820"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="2sL-xd-4GO">
+                                <rect key="frame" x="30" y="74" width="354" height="758"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-VX-Qrg">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsn-Zy-Mow">
-                                        <rect key="frame" x="0.0" y="120" width="354" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="143"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="QGJ-Pa-B4P">
-                                        <rect key="frame" x="0.0" y="240" width="354" height="60"/>
+                                        <rect key="frame" x="0.0" y="206" width="354" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-Rg-aqA">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -69,11 +63,11 @@
                                                     <constraint firstAttribute="width" constant="60" id="iSw-yy-xP5"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="+/-">
+                                                <state key="normal" title="&lt;">
                                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="PM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsP-qi-ehW"/>
+                                                    <action selector="Backb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sR3-QB-szT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvV-Xu-Ock">
@@ -92,8 +86,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-Hz-iYS">
-                                        <rect key="frame" x="0.0" y="370" width="354" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-Hz-iYS">
+                                        <rect key="frame" x="0.0" y="329" width="354" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYZ-SE-sRN">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -111,7 +105,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhv-Me-sFD">
-                                                <rect key="frame" x="98" y="0.0" width="60" height="60"/>
+                                                <rect key="frame" x="101" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="GcS-Jn-P7k"/>
                                                     <constraint firstAttribute="height" constant="60" id="qju-jD-4b4"/>
@@ -126,25 +120,28 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuS-Nn-hpr">
-                                                <rect key="frame" x="196" y="0.0" width="60" height="60"/>
+                                                <rect key="frame" x="202" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="9EC-W5-2AR"/>
                                                     <constraint firstAttribute="width" constant="60" id="Z9W-h5-VZ8"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="9"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="9">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="N9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiK-Zh-GU4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0d-ef-dZV">
-                                                <rect key="frame" x="294" y="0.0" width="60" height="60"/>
+                                                <rect key="frame" x="303" y="0.0" width="51" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="0cy-QQ-AOp"/>
                                                     <constraint firstAttribute="height" constant="60" id="63B-at-VgY"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="X">
+                                                <buttonConfiguration key="configuration" style="filled" title="x">
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
@@ -155,7 +152,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="oxw-cZ-Erh">
-                                        <rect key="frame" x="0.0" y="500" width="354" height="60"/>
+                                        <rect key="frame" x="0.0" y="452" width="354" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otI-jz-AL2">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -164,7 +161,10 @@
                                                     <constraint firstAttribute="height" constant="60" id="Zwk-PU-CQg"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="4"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="4">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="F4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d80-zM-Iac"/>
                                                 </connections>
@@ -176,7 +176,10 @@
                                                     <constraint firstAttribute="height" constant="60" id="gv1-OC-jEM"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="5"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="5">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="F5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkK-iL-eID"/>
                                                 </connections>
@@ -188,7 +191,10 @@
                                                     <constraint firstAttribute="width" constant="60" id="mOY-bt-m1q"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="6"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="6">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="S6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEt-Sw-s2N"/>
                                                 </connections>
@@ -211,7 +217,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Z6g-nV-tvv">
-                                        <rect key="frame" x="0.0" y="630" width="354" height="60"/>
+                                        <rect key="frame" x="0.0" y="575" width="354" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIE-mi-S3Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -220,7 +226,10 @@
                                                     <constraint firstAttribute="width" constant="60" id="gQA-g1-eq7"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="1"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="1">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="O1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcx-Lj-t8p"/>
                                                 </connections>
@@ -232,7 +241,10 @@
                                                     <constraint firstAttribute="width" constant="60" id="kJ1-BQ-7eE"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="2"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="2">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="T2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iJ-xz-4Ng"/>
                                                 </connections>
@@ -244,7 +256,10 @@
                                                     <constraint firstAttribute="width" constant="60" id="gDq-Vg-pqE"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="3"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="3">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="T3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUe-2L-xQt"/>
                                                 </connections>
@@ -267,7 +282,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-bs-McX">
-                                        <rect key="frame" x="0.0" y="760" width="354" height="60"/>
+                                        <rect key="frame" x="0.0" y="698" width="354" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="In7-da-7KN">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -276,7 +291,10 @@
                                                     <constraint firstAttribute="width" constant="60" id="zGF-tk-ROQ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="0"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="0">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="Z0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a60-Aq-VsF"/>
                                                 </connections>
@@ -340,9 +358,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2sL-xd-4GO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7WC-p1-srT"/>
+                            <constraint firstItem="2sL-xd-4GO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="W31-Vd-D75"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2sL-xd-4GO" secondAttribute="bottom" constant="30" id="gfE-lK-2xY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sL-xd-4GO" secondAttribute="trailing" constant="30" id="hQY-cu-4Pv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AC" destination="dhL-Rg-aqA" id="Ct3-iG-uic"/>
+                        <outlet property="Back" destination="ut4-f3-9d9" id="2do-W2-Qko"/>
                         <outlet property="C" destination="Cgm-aJ-8Ke" id="tm1-HW-47Y"/>
                         <outlet property="DOT" destination="KXu-oe-FUo" id="jjb-Xe-8bB"/>
                         <outlet property="DisplayLabel" destination="VkQ-VX-Qrg" id="ZE3-1f-87Z"/>
@@ -355,14 +380,12 @@
                         <outlet property="Multiple" destination="t0d-ef-dZV" id="W3l-BD-kxt"/>
                         <outlet property="N9" destination="kuS-Nn-hpr" id="jwa-0y-oqK"/>
                         <outlet property="O1" destination="lIE-mi-S3Y" id="zIy-0F-NQ3"/>
-                        <outlet property="PM" destination="ut4-f3-9d9" id="WJq-13-eIp"/>
                         <outlet property="Plus" destination="BVZ-dQ-LAa" id="Pae-dn-aZ1"/>
                         <outlet property="Remain" destination="b6f-sL-crb" id="PnT-ly-lYt"/>
                         <outlet property="S6" destination="FXQ-3g-OZR" id="MTT-Gj-Ttx"/>
                         <outlet property="S7" destination="eYZ-SE-sRN" id="QhK-p0-gY0"/>
                         <outlet property="T2" destination="zXB-5O-jh0" id="GAA-ts-D8K"/>
                         <outlet property="T3" destination="VxE-io-f5f" id="5kn-cM-DCs"/>
-                        <outlet property="WDisplaylabel" destination="Qsn-Zy-Mow" id="mcO-1R-gLu"/>
                         <outlet property="Z0" destination="In7-da-7KN" id="2P7-4A-g4h"/>
                     </connections>
                 </viewController>
@@ -372,6 +395,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

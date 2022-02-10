@@ -9,12 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var WDisplaylabel: UILabel!
-    var workings:String = ""
+
+    
     @IBOutlet weak var DisplayLabel: UILabel!
     @IBOutlet weak var AC: UIButton!
     @IBOutlet weak var C: UIButton!
-    @IBOutlet weak var PM: UIButton!
+    @IBOutlet weak var Back: UIButton!
     @IBOutlet weak var Division: UIButton!
     @IBOutlet weak var S7: UIButton!
     @IBOutlet weak var E8: UIButton!
@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Multiple: UIButton!
     @IBOutlet weak var Remain: UIButton!
     
+    var workings:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         clearAll()
@@ -41,26 +42,116 @@ class ViewController: UIViewController {
     func clearAll(){
         workings = ""
         DisplayLabel.text = ""
-        WDisplaylabel.text = ""
-    }
-    func addToWorkings(value: String){
-        workings = workings + value
-        WDisplaylabel.text = workings
     }
     
-    @IBAction func AC(_ sender: Any) {
-        addToWorkings(value: "%")
+    @IBAction func Equal(_ sender: Any) {
+        if(validInput())
+                {
+                    let checkedWorkingsForPercent = workings.replacingOccurrences(of: "%", with: "*0.01")
+                    let expression = NSExpression(format: checkedWorkingsForPercent)
+                    let result = expression.expressionValue(with: nil, context: nil) as! Double
+                    let resultString = formatResult(result: result)
+                    DisplayLabel.text = resultString
+                }
+                else
+                {
+                    let alert = UIAlertController(
+                        title: "Invalid Input",
+                        message: "Calculator unable to do math based on input",
+                        preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                }
     }
+    func validInput() ->Bool
+        {
+            var count = 0
+            var funcCharIndexes = [Int]()
+            
+            for char in workings
+            {
+                if(specialCharacter(char: char))
+                {
+                    funcCharIndexes.append(count)
+                }
+                count += 1
+            }
+            
+            var previous: Int = -1
+            
+            for index in funcCharIndexes
+            {
+                if(index == 0)
+                {
+                    return false
+                }
+                
+                if(index == workings.count - 1)
+                {
+                    return false
+                }
+                
+                if (previous != -1)
+                {
+                    if(index - previous == 1)
+                    {
+                        return false
+                    }
+                }
+                previous = index
+            }
+            
+            return true
+        }
+    func specialCharacter (char: Character) -> Bool
+        {
+            if(char == "*")
+            {
+                return true
+            }
+            if(char == "/")
+            {
+                return true
+            }
+            if(char == "+")
+            {
+                return true
+            }
+            return false
+        }
+        
+        func formatResult(result: Double) -> String
+        {
+            if(result.truncatingRemainder(dividingBy: 1) == 0)
+            {
+                return String(format: "%.0f", result)
+            }
+            else
+            {
+                return String(format: "%.2f", result)
+            }
+        }
+    @IBAction func AC(_ sender: Any) {
+        clearAll()
+    }
+    
     @IBAction func Clear(_ sender: Any) {
-        addToWorkings(value: "C")
         clearAll()
         
     }
-    @IBAction func PM(_ sender: Any) {
-        addToWorkings(value: "+/-")
+    @IBAction func Backb(_ sender: Any) {
+        if(!workings.isEmpty)
+                {
+                    workings.removeLast()
+                    DisplayLabel.text = workings
+                }
+    }
+    func addToWorkings(value: String){
+        workings = workings + value
+        DisplayLabel.text = workings
     }
     @IBAction func Division(_ sender: Any) {
-        addToWorkings(value: "÷")
+        addToWorkings(value: "/")
     }
     @IBAction func Multiply(_ sender: Any) {
         addToWorkings(value: "*")
@@ -73,9 +164,6 @@ class ViewController: UIViewController {
     }
     @IBAction func Plus(_ sender: Any) {
         addToWorkings(value: "+")
-    }
-    @IBAction func Equal(_ sender: Any) {
-        addToWorkings(value: "=")
     }
     @IBAction func Remainder(_ sender: Any) {
         addToWorkings(value: "%")
