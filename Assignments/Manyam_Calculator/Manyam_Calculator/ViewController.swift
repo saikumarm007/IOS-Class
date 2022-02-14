@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
 
     
+    @IBOutlet weak var pm: UIButton!
     @IBOutlet weak var DisplayLabel: UILabel!
     @IBOutlet weak var AC: UIButton!
     @IBOutlet weak var C: UIButton!
@@ -47,11 +48,16 @@ class ViewController: UIViewController {
     @IBAction func Equal(_ sender: Any) {
         if(validInput())
                 {
-                    let checkedWorkingsForPercent = workings.replacingOccurrences(of: "%", with: "*0.01")
-                    let expression = NSExpression(format: checkedWorkingsForPercent)
-                    let result = expression.expressionValue(with: nil, context: nil) as! Double
-                    let resultString = formatResult(result: result)
-                    DisplayLabel.text = resultString
+            let checkedWorkingsForPercent = workings
+//                .replacingOccurrences(of: "%", with: "")
+                        let expression = NSExpression(format: checkedWorkingsForPercent)
+                        let result = expression.expressionValue(with: nil, context: nil) as! Double
+//            if(expression == "/"){
+//
+//
+//            }
+                        let resultString = formatResult(result: result)
+                        DisplayLabel.text = resultString
                 }
                 else
                 {
@@ -117,18 +123,24 @@ class ViewController: UIViewController {
             {
                 return true
             }
+            if(char == "%")
+            {
+                return true
+            }
             return false
         }
         
         func formatResult(result: Double) -> String
         {
+            
             if(result.truncatingRemainder(dividingBy: 1) == 0)
             {
-                return String(format: "%.0f", result)
+                return String(format: "%.f", result)
             }
             else
             {
-                return String(format: "%.2f", result)
+//                return "Error"
+                return String(format: "%.1f", result)
             }
         }
     @IBAction func AC(_ sender: Any) {
@@ -136,20 +148,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Clear(_ sender: Any) {
-        clearAll()
+        if(!workings.isEmpty){
+            workings.removeLast()
+            DisplayLabel.text = workings
+        }
         
     }
-    @IBAction func Backb(_ sender: Any) {
-        if(!workings.isEmpty)
-                {
-                    workings.removeLast()
-                    DisplayLabel.text = workings
-                }
-    }
+
     func addToWorkings(value: String){
         workings = workings + value
         DisplayLabel.text = workings
     }
+   
+    
+    @IBAction func PM(_ sender: Any) {
+        let pm = DisplayLabel.text!
+        var RunningTotal = (pm as NSString).doubleValue
+        if(RunningTotal > 0){
+            RunningTotal = RunningTotal * -1;
+            let std = String(format: "%.0f", RunningTotal)
+            DisplayLabel.text = std;
+            workings = std;
+        }
+        else{
+            RunningTotal = RunningTotal * -1;
+            let std = String(format: "%.0f", RunningTotal)
+            DisplayLabel.text = std;
+            workings = std;
+        }
+        }
+        
+        
+    
     @IBAction func Division(_ sender: Any) {
         addToWorkings(value: "/")
     }
